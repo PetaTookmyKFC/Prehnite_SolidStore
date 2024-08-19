@@ -1,6 +1,9 @@
 package prinhitesolidstore
 
-import "path/filepath"
+import (
+	"os"
+	"path/filepath"
+)
 
 type Store struct {
 	folder string // No External editing after creation
@@ -19,6 +22,11 @@ func CreateStore(location string) (s *Store, err error) {
 		if err != nil {
 			return nil, err
 		}
+	}
+
+	st, err := os.Stat(location)
+	if os.IsNotExist(err) || !st.IsDir() {
+		os.MkdirAll(location, os.ModePerm)
 	}
 
 	s = &Store{
