@@ -1,4 +1,4 @@
-package prinhitesolidstore
+package SolidStore
 
 import (
 	"errors"

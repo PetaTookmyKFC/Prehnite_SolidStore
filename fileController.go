@@ -1,4 +1,4 @@
-package prinhitesolidstore
+package SolidStore
 
 import (
 	"bufio"
@@ -90,7 +90,7 @@ func (s *Store) DeleteItem(id string) (err error) {
 	return err
 }
 
-func (s *Store) readItem(id string) (data []byte, err error) {
+func (s *Store) ReadItem(id string) (data []byte, err error) {
 
 	fullpath := s.Fullpath(id)
 	// Check that the path is correct
