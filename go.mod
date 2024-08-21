@@ -1,4 +1,4 @@
-module github.com/petatookmykfc/prehnite_solidstore
+module github.com/PetaTookmyKFC/Prehnite_SolidStore
 
 go 1.22.4
 
